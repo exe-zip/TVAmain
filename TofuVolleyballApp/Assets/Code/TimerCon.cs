@@ -20,7 +20,7 @@ public class TimerCon : MonoBehaviour
         }
         public string Tostr()
         {
-            return string.Format("{0}:{1:00}:{2}",this.h,this.m,this.s);
+            return string.Format("{0}:{1:00}:{2:00}",this.h,this.m,this.s);
         }
         public void Count()
         {
