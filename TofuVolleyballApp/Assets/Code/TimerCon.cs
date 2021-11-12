@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class TimerCon : MonoBehaviour
 {
@@ -10,27 +11,31 @@ public class TimerCon : MonoBehaviour
     {
         public int h { get; set; }
         public int m { get; set; }
-        public int s { get; set; }
-        public void Sethms(int sonly)
+        public float s { get; set; }
+        public void Sethms(float sonly)
         {
-            this.h = sonly / 3600;
-            this.m = (sonly % 3600) / 60;
-            this.s = (sonly % 3600) % 60;
+            this.h = (int)(sonly / 3600f);
+            this.m = (int)((sonly % 3600f) / 60f);
+            this.s = (sonly % 3600f) % 60f;
         }
         public string Tostr()
         {
-            return string.Format("{0}:{1:d2}:{2:d2}",this.h,this.m,this.s);
+            return string.Format("{0}:{1:00}:{2}",this.h,this.m,this.s);
+        }
+        public void Count()
+        {
+            
         }
     }
 
     public TextMeshProUGUI timetext;
-    int settime;
+    float settime;
     float nowtimef = 0;
     Hms nowtime = new Hms();
     public bool mode = false;
     void Start()
     {
-        settime = 78;
+        settime = 790401f;
         nowtime.Sethms(settime);
     }
 
@@ -38,7 +43,7 @@ public class TimerCon : MonoBehaviour
     {
         if (mode)
         {
-
+            
         }
         timetext.text = nowtime.Tostr();
     }
@@ -53,10 +58,5 @@ public class TimerCon : MonoBehaviour
         {
             mode = true;
         }
-    }
-
-    void Countdown()
-    {
-        
     }
 }
