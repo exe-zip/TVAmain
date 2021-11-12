@@ -7,7 +7,7 @@ using TMPro;
 public class TimerCon : MonoBehaviour
 {
     public TextMeshProUGUI timetext;
-    bool mode = false;
+    public bool mode = false;
     float deltatime = 0f;
 
     void Start()
