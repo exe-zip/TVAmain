@@ -25,13 +25,13 @@ public class TimerCon : MonoBehaviour
 
     public TextMeshProUGUI timetext;
     int settime;
-    float nowtime = 0;
+    float nowtimef = 0;
+    Hms nowtime = new Hms();
     public bool mode = false;
-
     void Start()
     {
-        settime = 3841;
-        nowtime=
+        settime = 10;
+        nowtime.Sethms(settime);
     }
 
     void Update()
@@ -40,7 +40,7 @@ public class TimerCon : MonoBehaviour
         {
 
         }
-        timetext.text = nowtime.ToString();
+        timetext.text = nowtime.Tostr();
     }
 
     public void Modechange()
@@ -57,6 +57,6 @@ public class TimerCon : MonoBehaviour
 
     void Countdown()
     {
-        nowtime -= Time.deltaTime;
+        
     }
 }
