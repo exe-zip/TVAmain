@@ -6,11 +6,11 @@ using TMPro;
 
 public class TimerCon : MonoBehaviour
 {
-    struct hms
+    public class Hms
     {
-        int h;
-        int m;
-        int s;
+        public int h { get; set; }
+        public int m { get; set; }
+        public int s { get; set; }
     }
 
     public TextMeshProUGUI timetext;
@@ -49,8 +49,9 @@ public class TimerCon : MonoBehaviour
         nowtime -= Time.deltaTime;
     }
 
-    void Tohms(int s)
+    Hms Tohms(int sonly)
     {
-
+        var HMS = new Hms() { h = sonly / 3600 , m = (sonly % 3600) / 60 , s = (sonly % 3600) % 60 };
+        return HMS;
     }
 }
