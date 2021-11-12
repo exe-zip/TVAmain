@@ -30,7 +30,7 @@ public class TimerCon : MonoBehaviour
     public bool mode = false;
     void Start()
     {
-        settime = 10;
+        settime = 78;
         nowtime.Sethms(settime);
     }
 
