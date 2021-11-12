@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 1550751904}
   - component: {fileID: 1550751903}
   m_Layer: 5
-  m_Name: ToTimer
+  m_Name: ToTimerSelect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,7 +662,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 774319190}
         m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
-        m_MethodName: ToTimer
+        m_MethodName: ToTimerSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -780,7 +780,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ToTimer
+  m_Text: ToTimerSelect
 --- !u!222 &1626293943
 CanvasRenderer:
   m_ObjectHideFlags: 0

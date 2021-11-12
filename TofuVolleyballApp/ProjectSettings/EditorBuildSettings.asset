@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 420d6d646d44f0c4dbc0259df061627e
   - enabled: 1
-    path: Assets/Scenes/Timer.unity
+    path: Assets/Scenes/TimerSelect.unity
     guid: e6fde737d0276654ab113b344237bd93
   - enabled: 1
     path: Assets/Scenes/Member.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Position.unity
     guid: 97c3a57f58ce4480581d56baf85f5904
+  - enabled: 1
+    path: Assets/Scenes/Timer.unity
+    guid: dad183d501c5048b2ac477cfe7c3b533
   m_configObjects: {}

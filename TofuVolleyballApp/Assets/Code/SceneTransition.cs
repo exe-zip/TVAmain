@@ -5,13 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -20,9 +18,9 @@ public class SceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene("Start");
     }
-    public void ToTimer()
+    public void ToTimerSelect()
     {
-        SceneManager.LoadScene("Timer");
+        SceneManager.LoadScene("TimerSelect");
     }
     public void ToMember()
     {
