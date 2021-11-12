@@ -6,23 +6,32 @@ using TMPro;
 
 public class TimerCon : MonoBehaviour
 {
+    struct hms
+    {
+        int h;
+        int m;
+        int s;
+    }
+
     public TextMeshProUGUI timetext;
+    int settime;
+    float nowtime = 0;
     public bool mode = false;
-    float deltatime = 0f;
 
     void Start()
     {
-        
+        settime = 3841;
     }
 
     void Update()
     {
         if (mode)
         {
-            deltatime += Time.deltaTime;
+
         }
-        timetext.text = deltatime.ToString();
+        timetext.text = nowtime.ToString();
     }
+
     public void Modechange()
     {
         if (mode)
@@ -33,5 +42,15 @@ public class TimerCon : MonoBehaviour
         {
             mode = true;
         }
+    }
+
+    void Countdown()
+    {
+        nowtime -= Time.deltaTime;
+    }
+
+    void Tohms(int s)
+    {
+
     }
 }
