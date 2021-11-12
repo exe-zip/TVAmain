@@ -24,7 +24,14 @@ public class TimerCon : MonoBehaviour
         }
         public void Count()
         {
-            
+            if (this.s < Time.deltaTime)
+            {
+
+            }
+            else
+            {
+                this.s -= Time.deltaTime;
+            }
         }
     }
 
@@ -43,7 +50,7 @@ public class TimerCon : MonoBehaviour
     {
         if (mode)
         {
-            
+            nowtime.Count();
         }
         timetext.text = nowtime.Tostr();
     }
