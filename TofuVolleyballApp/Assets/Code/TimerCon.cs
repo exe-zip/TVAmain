@@ -19,7 +19,7 @@ public class TimerCon : MonoBehaviour
         }
         public string Tostr()
         {
-            return $"{this.h}:{this.m}:{this.s}";
+            return string.Format("{0}:{1:d2}:{2:d2}",this.h,this.m,this.s);
         }
     }
 
