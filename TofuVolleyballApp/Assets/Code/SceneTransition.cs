@@ -30,6 +30,10 @@ public class SceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene("Position");
     }
+    public void ToTimer()
+    {
+        SceneManager.LoadScene("Timer");
+    }
 
 
 }
