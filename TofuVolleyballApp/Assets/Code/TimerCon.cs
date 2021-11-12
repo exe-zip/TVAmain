@@ -26,7 +26,8 @@ public class TimerCon : MonoBehaviour
         {
             if (this.s < Time.deltaTime)
             {
-
+                this.s = this.s+60f-Time.deltaTime;
+                this.m--;
             }
             else
             {
@@ -42,7 +43,7 @@ public class TimerCon : MonoBehaviour
     public bool mode = false;
     void Start()
     {
-        settime = 790401f;
+        settime = 3665f;
         nowtime.Sethms(settime);
     }
 
