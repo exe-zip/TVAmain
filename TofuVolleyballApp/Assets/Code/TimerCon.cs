@@ -11,6 +11,16 @@ public class TimerCon : MonoBehaviour
         public int h { get; set; }
         public int m { get; set; }
         public int s { get; set; }
+        public void Sethms(int sonly)
+        {
+            this.h = sonly / 3600;
+            this.m = (sonly % 3600) / 60;
+            this.s = (sonly % 3600) % 60;
+        }
+        public string Tostr()
+        {
+            return $"{this.h}:{this.m}:{this.s}";
+        }
     }
 
     public TextMeshProUGUI timetext;
@@ -21,6 +31,7 @@ public class TimerCon : MonoBehaviour
     void Start()
     {
         settime = 3841;
+        nowtime=
     }
 
     void Update()
@@ -47,11 +58,5 @@ public class TimerCon : MonoBehaviour
     void Countdown()
     {
         nowtime -= Time.deltaTime;
-    }
-
-    Hms Tohms(int sonly)
-    {
-        var HMS = new Hms() { h = sonly / 3600 , m = (sonly % 3600) / 60 , s = (sonly % 3600) % 60 };
-        return HMS;
     }
 }
