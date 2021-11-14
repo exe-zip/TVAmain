@@ -12,7 +12,8 @@ public class TimerCon : MonoBehaviour
         public int h { get; set; }
         public int m { get; set; }
         public float s { get; set; }
-        public float settime { get; set; }
+        public int num { get; set; }
+        public float[] menutime { get; set; } = new float[64];
 
         public void Tohms(float sonly)
         {
@@ -20,10 +21,9 @@ public class TimerCon : MonoBehaviour
             this.m = (int)((sonly % 3600f) / 60f);
             this.s = (sonly % 3600f) % 60f;
         }
-        public void Set(float set)
+        public void Set()
         {
-            Tohms(set);
-            settime = set;
+            Tohms(menutime[num]);
         }
         public string Tostr()
         {
@@ -33,17 +33,25 @@ public class TimerCon : MonoBehaviour
         {
             if (this.s-Time.deltaTime <= 0)
             {
-                this.s = this.s + 60f - Time.deltaTime;
-                this.m--;
+                if (this.m == 0)
+                {
+                    Next();
+                }
+                else
+                {
+                    this.s = this.s + 60f - Time.deltaTime;
+                    this.m--;
+                }
             }
             else
             {
                 this.s -= Time.deltaTime;
             }
         }
-        public void Reset()
+        public void Next()
         {
-            Tohms(settime);
+            num++;
+            Set();
         }
     }
 
@@ -52,10 +60,15 @@ public class TimerCon : MonoBehaviour
     Hms nowtime = new Hms();
     public bool mode = false;
     string[] menuname = new string[64];
-    int nownum = 0;
+    float[] inputmenutime = new float[64];
+
     void Start()
     {
-        nowtime.Set(3663f);
+        nowtime.num = 0;
+        inputmenutime[0] = 5f;
+        inputmenutime[1] = 3663f;
+        nowtime.menutime= inputmenutime;
+        nowtime.Set();
         menuname[0] = "pass";
         menuname[1] = "serve";
     }
@@ -67,7 +80,7 @@ public class TimerCon : MonoBehaviour
             nowtime.Count();
         }
         timetext.text = nowtime.Tostr();
-        menutext.text = menuname[nownum];
+        menutext.text = menuname[nowtime.num];
     }
 
     public void Modechange()
@@ -84,6 +97,6 @@ public class TimerCon : MonoBehaviour
 
     public void Timereset()
     {
-        nowtime.Reset();
+        nowtime.Set();
     }
 }
