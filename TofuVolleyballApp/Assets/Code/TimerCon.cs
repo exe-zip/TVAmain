@@ -12,11 +12,18 @@ public class TimerCon : MonoBehaviour
         public int h { get; set; }
         public int m { get; set; }
         public float s { get; set; }
-        public void Sethms(float sonly)
+        public float settime { get; set; }
+
+        public void Tohms(float sonly)
         {
             this.h = (int)(sonly / 3600f);
             this.m = (int)((sonly % 3600f) / 60f);
             this.s = (sonly % 3600f) % 60f;
+        }
+        public void Set(float set)
+        {
+            Tohms(set);
+            settime = set;
         }
         public string Tostr()
         {
@@ -34,17 +41,19 @@ public class TimerCon : MonoBehaviour
                 this.s -= Time.deltaTime;
             }
         }
+        public void Reset()
+        {
+            Tohms(settime);
+        }
     }
 
     public TextMeshProUGUI timetext;
-    float settime;
     float nowtimef = 0;
     Hms nowtime = new Hms();
     public bool mode = false;
     void Start()
     {
-        settime = 3665f;
-        nowtime.Sethms(settime);
+        nowtime.Set(3663f);
     }
 
     void Update()
@@ -66,5 +75,10 @@ public class TimerCon : MonoBehaviour
         {
             mode = true;
         }
+    }
+
+    public void Timereset()
+    {
+        nowtime.Reset();
     }
 }
