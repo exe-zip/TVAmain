@@ -1809,3 +1809,37 @@ Total: 1.786823 ms (FindLiveObjects: 0.185614 ms CreateObjectMapping: 0.050655 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002698 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.293 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1839 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 173.6 MB.
+System memory in use after: 173.8 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2603.
+Total: 1.772117 ms (FindLiveObjects: 0.183936 ms CreateObjectMapping: 0.053880 ms MarkObjects: 1.516949 ms  DeleteObjects: 0.016213 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.3 MB.
+System memory in use after: 138.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2603.
+Total: 1.879459 ms (FindLiveObjects: 0.231243 ms CreateObjectMapping: 0.058311 ms MarkObjects: 1.568306 ms  DeleteObjects: 0.020896 ms)
+
