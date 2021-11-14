@@ -48,12 +48,16 @@ public class TimerCon : MonoBehaviour
     }
 
     public TextMeshProUGUI timetext;
-    float nowtimef = 0;
+    public TextMeshProUGUI menutext;
     Hms nowtime = new Hms();
     public bool mode = false;
+    string[] menuname = new string[64];
+    int nownum = 0;
     void Start()
     {
         nowtime.Set(3663f);
+        menuname[0] = "pass";
+        menuname[1] = "serve";
     }
 
     void Update()
@@ -63,6 +67,7 @@ public class TimerCon : MonoBehaviour
             nowtime.Count();
         }
         timetext.text = nowtime.Tostr();
+        menutext.text = menuname[nownum];
     }
 
     public void Modechange()
