@@ -53,6 +53,11 @@ public class TimerCon : MonoBehaviour
             num++;
             Set();
         }
+        public void Back()
+        {
+            num--;
+            Set();
+        }
     }
 
     public TextMeshProUGUI timetext;
@@ -98,5 +103,15 @@ public class TimerCon : MonoBehaviour
     public void Timereset()
     {
         nowtime.Set();
+    }
+
+    public void Backmenu()
+    {
+        nowtime.Back();
+    }
+
+    public void Nextmenu()
+    {
+        nowtime.Next();
     }
 }
