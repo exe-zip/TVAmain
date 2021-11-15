@@ -14,7 +14,7 @@ public class TimerCon : MonoBehaviour
         public float s { get; set; }
         public int num { get; set; }
         public bool mode { get; set; }
-        public float[] menutime { get; set; } = new float[64];
+        public List<float> menutime { get; set; } = new List<float>();
 
         public void Tohms(float sonly)
         {
@@ -59,7 +59,7 @@ public class TimerCon : MonoBehaviour
         }
         public void Next()
         {
-            if (menutime[num + 1] != 0)
+            if (num!=this.menutime.Count-1)
             {
                 num++;
                 Set();
@@ -90,15 +90,15 @@ public class TimerCon : MonoBehaviour
     Hms nowtime = new Hms();
     public bool getmode = false;
     string[] menuname = new string[64];
-    float[] inputmenutime = new float[64];
+    List<float> inputmenutime = new List<float>();
 
     void Start()
     {
         nowtime.mode = getmode;
         nowtime.num = 0;
-        inputmenutime[0] = 5f;
-        inputmenutime[1] = 3603f;
-        inputmenutime[2] = 4f;
+        inputmenutime.Add(5f);
+        inputmenutime.Add(3603f);
+        inputmenutime.Add(4f);
         nowtime.menutime= inputmenutime;
         nowtime.Set();
         menuname[0] = "pass";
