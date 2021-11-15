@@ -35,7 +35,15 @@ public class TimerCon : MonoBehaviour
             {
                 if (this.m == 0)
                 {
-                    Next();
+                    if (this.h == 0)
+                    {
+                        Next();
+                    }
+                    else
+                    {
+                        this.m = 60;
+                        this.h--;
+                    }
                 }
                 else
                 {
@@ -71,7 +79,7 @@ public class TimerCon : MonoBehaviour
     {
         nowtime.num = 0;
         inputmenutime[0] = 5f;
-        inputmenutime[1] = 3663f;
+        inputmenutime[1] = 3603f;
         nowtime.menutime= inputmenutime;
         nowtime.Set();
         menuname[0] = "pass";
