@@ -762,3 +762,42 @@ Total: 1.855619 ms (FindLiveObjects: 0.162565 ms CreateObjectMapping: 0.048754 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002616 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.136 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1839 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.4 MB.
+System memory in use after: 164.5 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2427.
+Total: 1.804829 ms (FindLiveObjects: 0.188288 ms CreateObjectMapping: 0.057002 ms MarkObjects: 1.543073 ms  DeleteObjects: 0.015480 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 551.932835 seconds.
+  path: Assets/Scenes/New Scene.unity
+  artifactKey: Guid(cfcb679fafeee402f967c11454f26e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/New Scene.unity using Guid(cfcb679fafeee402f967c11454f26e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4678744aae91a163241786ca82418d67') in 0.017653 seconds
+  Import took 0.022863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.708970 seconds.
+  path: Assets/Scenes/TimerCostom.unity
+  artifactKey: Guid(cfcb679fafeee402f967c11454f26e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TimerCostom.unity using Guid(cfcb679fafeee402f967c11454f26e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '998a43eac89524e765f4ddda5ccfd372') in 0.003616 seconds
+  Import took 0.010196 seconds .
+
