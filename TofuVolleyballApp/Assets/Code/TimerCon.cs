@@ -58,13 +58,24 @@ public class TimerCon : MonoBehaviour
         }
         public void Next()
         {
-            num++;
-            Set();
+            if (menutime[num + 1] != 0)
+            {
+                num++;
+                Set();
+            }
+            else
+            {
+                num = 0;
+                Set();
+            }
         }
         public void Back()
         {
-            num--;
-            Set();
+            if (num >= 1)
+            {
+                num--;
+                Set();
+            }
         }
     }
 
@@ -80,6 +91,7 @@ public class TimerCon : MonoBehaviour
         nowtime.num = 0;
         inputmenutime[0] = 5f;
         inputmenutime[1] = 3603f;
+        inputmenutime[2] = 4f;
         nowtime.menutime= inputmenutime;
         nowtime.Set();
         menuname[0] = "pass";
