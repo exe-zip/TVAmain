@@ -13,6 +13,7 @@ public class TimerCon : MonoBehaviour
         public int m { get; set; }
         public float s { get; set; }
         public int num { get; set; }
+        public bool mode { get; set; }
         public float[] menutime { get; set; } = new float[64];
 
         public void Tohms(float sonly)
@@ -65,8 +66,7 @@ public class TimerCon : MonoBehaviour
             }
             else
             {
-                num = 0;
-                Set();
+                End();
             }
         }
         public void Back()
@@ -77,17 +77,24 @@ public class TimerCon : MonoBehaviour
                 Set();
             }
         }
+        public void End()
+        {
+            num = 0;
+            Set();
+            mode = false;
+        }
     }
 
     public TextMeshProUGUI timetext;
     public TextMeshProUGUI menutext;
     Hms nowtime = new Hms();
-    public bool mode = false;
+    public bool getmode = false;
     string[] menuname = new string[64];
     float[] inputmenutime = new float[64];
 
     void Start()
     {
+        nowtime.mode = getmode;
         nowtime.num = 0;
         inputmenutime[0] = 5f;
         inputmenutime[1] = 3603f;
@@ -100,7 +107,7 @@ public class TimerCon : MonoBehaviour
 
     void Update()
     {
-        if (mode)
+        if (nowtime.mode)
         {
             nowtime.Count();
         }
@@ -110,13 +117,13 @@ public class TimerCon : MonoBehaviour
 
     public void Modechange()
     {
-        if (mode)
+        if (nowtime.mode)
         {
-            mode = false;
+            nowtime.mode = false;
         }
         else
         {
-            mode = true;
+            nowtime.mode = true;
         }
     }
 
