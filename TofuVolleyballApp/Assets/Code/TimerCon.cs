@@ -87,14 +87,13 @@ public class TimerCon : MonoBehaviour
 
     public TextMeshProUGUI timetext;
     public TextMeshProUGUI menutext;
-    Hms nowtime = new Hms();
-    public bool getmode = false;
+    public Hms nowtime = new Hms();
     string[] menuname = new string[64];
     List<float> inputmenutime = new List<float>();
 
     void Start()
     {
-        nowtime.mode = getmode;
+        nowtime.mode = false;
         nowtime.num = 0;
         inputmenutime.Add(5f);
         inputmenutime.Add(3603f);

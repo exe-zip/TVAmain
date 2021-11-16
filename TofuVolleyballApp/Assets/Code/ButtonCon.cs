@@ -19,7 +19,7 @@ public class ButtonCon : MonoBehaviour
 
     public void Texturechange_startstop()
     {
-        if (manager_timer.GetComponent<TimerCon>().getmode)
+        if (manager_timer.GetComponent<TimerCon>().nowtime.mode)
         {
             botton_startstop.text = "Stop";
         }
