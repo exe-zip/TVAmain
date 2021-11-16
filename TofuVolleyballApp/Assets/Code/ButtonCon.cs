@@ -9,15 +9,11 @@ public class ButtonCon : MonoBehaviour
     public GameObject manager_timer;
     void Start()
     {
-        Texturechange_startstop();
+
+
     }
 
     void Update()
-    {
-
-    }
-
-    public void Texturechange_startstop()
     {
         if (manager_timer.GetComponent<TimerCon>().nowtime.mode)
         {
