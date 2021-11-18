@@ -85,11 +85,17 @@ public class TimerCon : MonoBehaviour
         }
     }
 
+
+
+
     public TextMeshProUGUI timetext;
     public TextMeshProUGUI menutext;
     public Hms nowtime = new Hms();
     string[] menuname = new string[64];
     List<float> inputmenutime = new List<float>();
+
+
+
 
     void Start()
     {
@@ -103,6 +109,9 @@ public class TimerCon : MonoBehaviour
         menuname[0] = "pass";
         menuname[1] = "serve";
     }
+
+
+
 
     void Update()
     {
