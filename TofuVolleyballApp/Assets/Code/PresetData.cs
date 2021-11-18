@@ -19,7 +19,7 @@ public class PresetData : MonoBehaviour
     }
 
     public List<PreData> preset = new List<PreData>();
-    public PreData data_add = new PreData();
+    public PreData newdata = new PreData();
     
     void Start()
     {
@@ -38,7 +38,7 @@ public class PresetData : MonoBehaviour
 
     public void Adddata(float time,string name)
     {
-        data_add.Addmenu(time, name);
-        preset.Add(data_add);
+        newdata.Addmenu(time, name);
+        preset.Add(newdata);
     }
 }
