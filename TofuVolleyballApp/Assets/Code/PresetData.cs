@@ -17,6 +17,10 @@ public class PresetData : MonoBehaviour
             this._menuname.Add(name);
         }
     }
+
+    public List<PreData> preset = new List<PreData>();
+    public PreData data_add = new PreData();
+    
     void Start()
     {
         
@@ -30,5 +34,11 @@ public class PresetData : MonoBehaviour
     public float Tosonly(int h,int m,int s)
     {
         return (float)(3600 * h + 60 * m + s);
+    }
+
+    public void Adddata(float time,string name)
+    {
+        data_add.Addmenu(time, name);
+        preset.Add(data_add);
     }
 }
