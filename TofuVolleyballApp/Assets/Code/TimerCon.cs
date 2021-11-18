@@ -116,14 +116,7 @@ public class TimerCon : MonoBehaviour
 
     public void Modechange()
     {
-        if (nowtime.mode)
-        {
-            nowtime.mode = false;
-        }
-        else
-        {
-            nowtime.mode = true;
-        }
+        nowtime.mode = !nowtime.mode;
     }
 
     public void Timereset()
