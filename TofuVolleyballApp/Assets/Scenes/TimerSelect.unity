@@ -1346,6 +1346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botton: {fileID: 312936944}
   contents: {fileID: 2067967756}
+  aa: {fileID: 246357586}
+  addprename: 
 --- !u!1 &1827646688
 GameObject:
   m_ObjectHideFlags: 0

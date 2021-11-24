@@ -11,6 +11,7 @@ public class PresetData : MonoBehaviour
     {
         public List<float> _menutime { get; set; } = new List<float>();
         public List<string> _menuname { get; set; } = new List<string>();
+        public string prename { get; set; } = "New Preset";
         public void Addmenu(float time,string name)
         {
             this._menutime.Add(time);
@@ -20,12 +21,16 @@ public class PresetData : MonoBehaviour
 
     public GameObject botton;
     public GameObject contents;
+    public Text aa;
     public List<PreData> preset = new List<PreData>();
     public PreData newdata = new PreData();
+
+    public string addprename;
     
     void Start()
     {
-        
+        addprename = "Test";
+        aa.text = "hoge";
     }
 
     void Update()
@@ -35,8 +40,8 @@ public class PresetData : MonoBehaviour
 
     public void Clone()
     {
-        GameObject cloneObject= Instantiate(botton);
-        cloneObject.transform.parent = contents.transform;
+        GameObject clone= Instantiate(botton);
+        clone.transform.parent = contents.transform;
     }
 
     public float Tosonly(int h,int m,int s)
