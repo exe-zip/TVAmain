@@ -19,6 +19,7 @@ public class PresetData : MonoBehaviour
     }
 
     public GameObject botton;
+    public GameObject contents;
     public List<PreData> preset = new List<PreData>();
     public PreData newdata = new PreData();
     
@@ -34,7 +35,8 @@ public class PresetData : MonoBehaviour
 
     public void Clone()
     {
-        Instantiate(botton);
+        GameObject cloneObject= Instantiate(botton);
+        cloneObject.transform.parent = contents.transform;
     }
 
     public float Tosonly(int h,int m,int s)
